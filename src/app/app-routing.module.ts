@@ -10,6 +10,8 @@ import { HomeServiceComponent } from './home-service/home-service.component';
 import { RegisterComponent } from './register/register.component';
 import { LeftContainerComponent } from './left-container/left-container.component';
 import { RightContainerComponent } from './right-container/right-container.component';
+import { CategorieComponent } from './categorie/categorie.component';
+import { CalendarComponent } from './calendar/calendar.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -21,7 +23,10 @@ const routes: Routes = [
 {path:"service",component:HomeServiceComponent},
 {path:"register",component:RegisterComponent},
 {path:"leftmeteo",component:LeftContainerComponent},
-{path:"rightmeteo",component:RightContainerComponent}
+{path:"rightmeteo",component:RightContainerComponent},
+{path:"categorie",component:CategorieComponent},
+{path:"calendar",component:CalendarComponent}
+
 
 ];
 

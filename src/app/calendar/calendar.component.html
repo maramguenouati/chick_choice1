@@ -1,0 +1,71 @@
+<body>
+    <div class="wrapper">
+      <div class="titre">
+        <h3>Trendy Timetable</h3>
+      </div>
+      <header>
+        <p class="current-date">{{ currentDate }}</p>
+        <div class="icons">
+          <span id="prev" (click)="prevNextClick(true)">
+            <fa-icon class="fa-xs" [icon]="faArrowCircleLeft"></fa-icon>
+          </span>
+          <span id="next" (click)="prevNextClick(false)">
+            <fa-icon class="fa-xs" [icon]="faArrowCircleRight"></fa-icon>
+          </span>
+        </div>
+      </header>
+      <div class="calendar">
+        <ul class="weeks">
+          <li>Sun</li>
+          <li>Mon</li>
+          <li>Tue</li>
+          <li>Wed</li>
+          <li>Thu</li>
+          <li>Fri</li>
+          <li>Sat</li>
+        </ul>
+        <ul class="days">
+          <li *ngFor="let day of days" (click)="handleDayClick(day)" [ngClass]="{ 'has-event': hasEvent(day) }">{{ day }}</li>
+        </ul>
+      </div>
+      <div class="popup">                        
+        <div class="modal fade" id="formModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="model-header">
+          
+                <h5 class="modal-title">Create your event</h5>
+              </div>
+              <form (submit)="createEvent(eventTitle.value, exampleColorInput.value)">
+                <label for="eventTitle" class="evtitre">Event Title:</label>
+                <input type="text" id="eventTitle" name="eventTitle" #eventTitle>
+                <button type="submit" class="bt">Create </button>
+                <div class="form-inline">
+                  <label for="exampleColorInput" class="form-label">Color Event :</label>
+                  <input type="color" class="form-control form-control-color" id="exampleColorInput" #exampleColorInput value="#563d7c" title="Choose your color">
+                </div>
+      
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="profile-actions">
+        <ul>
+          <li>
+            <span>
+              <fa-icon class="fa-lg" [icon]="faUser" routerLink="/home"></fa-icon>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+    <!-- Formulaire modal -->
+    
+  </body>
+ 
+
+
+
+     

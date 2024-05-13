@@ -16,7 +16,10 @@ import { AccountComponent } from './account/account.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeServiceComponent } from './home-service/home-service.component';
 import { HowItWorkComponent } from './how-it-work/how-it-work.component';
-import { RegisterComponent } from './register/register.component'
+import { RegisterComponent } from './register/register.component';
+import { CategorieComponent } from './categorie/categorie.component';
+import { ChatbotComponent } from './chatbot/chatbot.component';
+import { CalendarComponent } from './calendar/calendar.component'
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { RegisterComponent } from './register/register.component'
     NavbarComponent,
     HomeServiceComponent,
     HowItWorkComponent,
-    RegisterComponent
+    RegisterComponent,
+    CategorieComponent,
+    ChatbotComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
