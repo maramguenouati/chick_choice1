@@ -12,6 +12,9 @@ import { LeftContainerComponent } from './left-container/left-container.componen
 import { RightContainerComponent } from './right-container/right-container.component';
 import { CategorieComponent } from './categorie/categorie.component';
 import { CalendarComponent } from './calendar/calendar.component';
+import { ChatbotComponent } from './chatbot/chatbot.component';
+import { WardrobeComponent } from './wardrobe/wardrobe.component';
+import { EventComponent } from './event/event.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -25,7 +28,11 @@ const routes: Routes = [
 {path:"leftmeteo",component:LeftContainerComponent},
 {path:"rightmeteo",component:RightContainerComponent},
 {path:"categorie",component:CategorieComponent},
-{path:"calendar",component:CalendarComponent}
+{path:"calendar",component:CalendarComponent},
+{path:"chatbot",component:ChatbotComponent},
+{path:"wardrob",component:WardrobeComponent},
+{path:"event",component:EventComponent}
+
 
 
 ];

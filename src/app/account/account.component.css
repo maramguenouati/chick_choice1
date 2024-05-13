@@ -1,8 +1,8 @@
 body{
-    background:#f9f9fb;    
+    background:#ffffff;    
     }
     .view-account{
-    background:#FFFFFF; 
+    background:#ffffff; 
     margin-top:20px;
     }
     .view-account .pro-label {
@@ -15,14 +15,24 @@ body{
     }
     
     .view-account .side-bar {
-    padding-bottom: 30px
+    padding-bottom: 30px;
+    left: 10px;
+    top :0px;
+    
+    }
+    .user{
+      border-color: #494d55;
+      border-radius: 25px;
+      margin-bottom: 15px;
+      width: 240px;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
     }
     
     .view-account .side-bar .user-info {
     text-align: center;
     margin-bottom: 15px;
     padding: 30px;
-    color: #616670;
+    color: #000000;
     border-bottom: 1px solid #f3f3f3
     }
     
@@ -44,11 +54,11 @@ body{
     }
     
     .view-account .side-bar .user-info .meta li a {
-    color: #616670
+    color: #000000
     }
     
     .view-account .side-bar .user-info .meta li.activity {
-    color: #a2a6af
+    color: #000000
     }
     
     .view-account .side-bar .side-menu {
@@ -76,18 +86,18 @@ body{
     
     .view-account .side-bar .side-menu .nav>li>a {
     display: inline-block;
-    color: #9499a3;
+    color: #000000;
     padding: 5px;
     border-bottom: 2px solid transparent
     }
     
     .view-account .side-bar .side-menu .nav>li>a:hover {
-    color: #616670;
+    color: #000000;
     background: none
     }
     
     .view-account .side-bar .side-menu .nav>li.active a {
-    color: #40babd;
+    color: #1b5253;
     border-bottom: 2px solid #40babd;
     background: none;
     border-right: none
@@ -326,7 +336,9 @@ body{
     .drive-wrapper .drive-item-inner {
     padding: 15px
     }
-    
+    .updateimg{
+        margin-bottom: 5px;
+    }
     .drive-wrapper .drive-item-title {
     margin-bottom: 15px;
     max-width: 100px;

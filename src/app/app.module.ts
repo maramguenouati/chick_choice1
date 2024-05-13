@@ -19,7 +19,9 @@ import { HowItWorkComponent } from './how-it-work/how-it-work.component';
 import { RegisterComponent } from './register/register.component';
 import { CategorieComponent } from './categorie/categorie.component';
 import { ChatbotComponent } from './chatbot/chatbot.component';
-import { CalendarComponent } from './calendar/calendar.component'
+import { CalendarComponent } from './calendar/calendar.component';
+import { WardrobeComponent } from './wardrobe/wardrobe.component';
+import { EventComponent } from './event/event.component'
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { CalendarComponent } from './calendar/calendar.component'
     RegisterComponent,
     CategorieComponent,
     ChatbotComponent,
-    CalendarComponent
+    CalendarComponent,
+    WardrobeComponent,
+    EventComponent
   ],
   imports: [
     BrowserModule,
