@@ -1,10 +1,11 @@
 .app-container{
     width: 100vw;
     height: 100vh;
-    background-color: #d6d7da;
+  margin-left: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 20px;
 }
 
 .weather-container{
@@ -13,10 +14,12 @@
     border-radius: 30px;
     display: flex;
     flex-direction: row;
+   
 }
 .left-container{
     flex: 3;
-    background-color: #ffffff;
+    background-color: #f6f6f8;
+
     border-top-left-radius: 30px;
     border-bottom-left-radius:30px;
 }

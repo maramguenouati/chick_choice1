@@ -13,25 +13,20 @@ body {
   padding: 0 10px;
   justify-content: center;
  
-  background: #f9dcc4;
+  
  
 }
-.titre{
-    display: flex;
-    margin-top: -50px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #c77dff;
-    font-weight: 900px;
-}
+
 .wrapper {
-  width: 800px;
-  height: 450px;
+    position: relative;
+  width: 850px;
+  height: 500px;
   justify-content: center;
   background: #fff;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  top: 20px;
+  left: 50px;
 }
 .wrapper header {
   display: flex;
@@ -115,24 +110,8 @@ header .current-date {
 .days li:not(.active):hover::before {
   background: #f2f2f2;
 }
-  /*icon profil*/
+
  
-  .profile-actions {
-    position: fixed;
-    display: block;
-    align-items: center;
-    top: 30px;
-    left: 1300px;
-  }
-  .profile-actions ul {
-    list-style-type: none; 
-    padding: 0;
-    margin: 0;
-  }
-  
-  .profile-actions ul li {
-    margin-bottom: 14px; 
-  }
 
   /* Dans votre fichier calendar.component.css ou calendar.component.scss */
 
@@ -160,7 +139,7 @@ header .current-date {
     margin-right: 5px;
    }
   .modal-content {
-    background-color: #ffe5ec;
+    background-color: #f7f7f7;
     margin: 15% auto;
     
     border: 1px solid #888;
@@ -171,8 +150,42 @@ header .current-date {
     justify-content: center;
 
   }
-
+.todayb{
+    border-radius: 25px;
+    background-color: #3678b9;
+    border-color: #3678b9;
+    width: 75px;
+    height: 40px;
+}
   
   
+  .days {
+    display: flex;
+    flex-wrap: wrap;
+  }
   
+  .days li {
+    flex: 1 0 14%; /* Approximately 7 days in a week */
+    border: 1px solid #ddd;
+    margin: 1px;
+    padding: 5px;
+    position: relative;
+  }
+  
+  .has-event {
+    background-color: #f0f0f0;
+  }
+  
+  .event {
+    font-size: 0.8em;
+    margin-top: 5px;
+    padding: 2px;
+    border-radius: 4px;
+    color: #fff;
+  }
+  .current-date {
+    background-color: #5fa87d; 
+    border-radius: 25px;
+    
+  }
   

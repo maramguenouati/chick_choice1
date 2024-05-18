@@ -21,8 +21,12 @@ import { CategorieComponent } from './categorie/categorie.component';
 import { ChatbotComponent } from './chatbot/chatbot.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { WardrobeComponent } from './wardrobe/wardrobe.component';
-import { EventComponent } from './event/event.component'
-
+import { EventComponent } from './event/event.component';
+import { SidebareComponent } from './sidebare/sidebare.component';
+import { WeatherRecommendationModalComponent } from './weather-recommendation-modal/weather-recommendation-modal.component'
+import { BsModalService } from 'ngx-bootstrap/modal';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { ClothingCategoriesComponent } from './clothing-categories/clothing-categories.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +45,10 @@ import { EventComponent } from './event/event.component'
     ChatbotComponent,
     CalendarComponent,
     WardrobeComponent,
-    EventComponent
+    EventComponent,
+    SidebareComponent,
+    WeatherRecommendationModalComponent,
+    ClothingCategoriesComponent
   ],
   imports: [
     BrowserModule,
@@ -49,10 +56,12 @@ import { EventComponent } from './event/event.component'
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ModalModule.forRoot()
     
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ ],
+  bootstrap: [AppComponent],
+ 
 })
 export class AppModule { }

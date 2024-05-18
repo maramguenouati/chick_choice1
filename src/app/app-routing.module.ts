@@ -15,9 +15,12 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { ChatbotComponent } from './chatbot/chatbot.component';
 import { WardrobeComponent } from './wardrobe/wardrobe.component';
 import { EventComponent } from './event/event.component';
+import { SidebareComponent } from './sidebare/sidebare.component';
+import { WeatherRecommendationModalComponent } from './weather-recommendation-modal/weather-recommendation-modal.component';
+import { ClothingCategoriesComponent } from './clothing-categories/clothing-categories.component';
 
 const routes: Routes = [
-  {path:"",component:HomeComponent},
+  {path:"home",component:HomeComponent},
 {path:"weather",component:WeatherComponent},
 {path:"account",component:AccountComponent},
 {path:"footer",component:FooterComponent},
@@ -30,8 +33,10 @@ const routes: Routes = [
 {path:"categorie",component:CategorieComponent},
 {path:"calendar",component:CalendarComponent},
 {path:"chatbot",component:ChatbotComponent},
-{path:"wardrob",component:WardrobeComponent},
-{path:"event",component:EventComponent}
+{path:"wardrob",component:WardrobeComponent , children:[{path:'',component:ClothingCategoriesComponent}]},
+{path:"event",component:EventComponent},
+{path:"sidebar",component:SidebareComponent},
+{path:"weatherRecommendation",component:WeatherRecommendationModalComponent}
 
 
 

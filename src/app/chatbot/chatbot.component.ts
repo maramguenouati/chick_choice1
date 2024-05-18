@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./chatbot.component.css']
 })
 export class ChatbotComponent {
-
+  showSidebar = true;
 }

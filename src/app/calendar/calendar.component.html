@@ -1,8 +1,7 @@
+<app-sidebare></app-sidebare>
 <body>
     <div class="wrapper">
-      <div class="titre">
-        <h3>Trendy Timetable</h3>
-      </div>
+     
       <header>
         <p class="current-date">{{ currentDate }}</p>
         <div class="icons">
@@ -13,6 +12,7 @@
             <fa-icon class="fa-xs" [icon]="faArrowCircleRight"></fa-icon>
           </span>
         </div>
+        <button (click)="goToToday()" class="todayb">Today</button>
       </header>
       <div class="calendar">
         <ul class="weeks">
@@ -25,47 +25,50 @@
           <li>Sat</li>
         </ul>
         <ul class="days">
-          <li *ngFor="let day of days" (click)="handleDayClick(day)" [ngClass]="{ 'has-event': hasEvent(day) }">{{ day }}</li>
-        </ul>
-      </div>
-      <div class="popup">                        
-        <div class="modal fade" id="formModal">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="model-header">
-          
-                <h5 class="modal-title">Create your event</h5>
-              </div>
-              <form (submit)="createEvent(eventTitle.value, exampleColorInput.value)">
-                <label for="eventTitle" class="evtitre">Event Title:</label>
-                <input type="text" id="eventTitle" name="eventTitle" #eventTitle>
-                <button type="submit" class="bt">Create </button>
-                <div class="form-inline">
-                  <label for="exampleColorInput" class="form-label">Color Event :</label>
-                  <input type="color" class="form-control form-control-color" id="exampleColorInput" #exampleColorInput value="#563d7c" title="Choose your color">
-                </div>
-      
-              </form>
+            <li *ngFor="let day of days; let i = index" 
+            (click)="handleDayClick(day)" 
+            [ngClass]="{ 'has-event': hasEvent(day), 
+                         'inactive': i < firstDayofMonth || i >= firstDayofMonth + lastDateofMonth,
+                         'current-date': isCurrentDate(day) }">
+            {{ day }}
+            <div *ngFor="let event of getEvents(day)" class="event" [style.background-color]="event.color">
+                {{ event.title }}
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="profile-actions">
-        <ul>
-          <li>
-            <span>
-              <fa-icon class="fa-lg" [icon]="faUser" routerLink="/home"></fa-icon>
-            </span>
-          </li>
+        </li>
+        
+
+        
+        
         </ul>
       </div>
+      <div class="popup">
+        <div class="modal fade" id="formModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Create your event</h5>
+                        <!-- Ajouter un bouton de fermeture (X) -->
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form (submit)="createEvent(eventTitle.value, exampleColorInput.value)">
+                        <label for="eventTitle" class="evtitre">Event Title:</label>
+                        <input type="text" id="eventTitle" name="eventTitle" #eventTitle>
+                        <button type="submit" class="bt">Create</button>
+                        <div class="form-inline">
+                            <label for="exampleColorInput" class="form-label">Color Event :</label>
+                            <input type="color" class="form-control form-control-color" id="exampleColorInput" #exampleColorInput value="#563d7c" title="Choose your color">
+                        </div>
+                    </form>
+                    <!-- Ajouter un bouton ou un icône de suppression -->
+                    <button type="button" class="btn btn-danger" (click)="deleteEvent()">Delete</button>
+                    <!-- Ou bien utiliser un icône de suppression -->
+                    <!-- <fa-icon class="fa-lg" [icon]="faTrash" (click)="deleteEvent()"></fa-icon> -->
+                </div>
+            </div>
+        </div>
     </div>
-  
-    <!-- Formulaire modal -->
     
-  </body>
- 
-
-
-
-     
+      
+    </div></body>
+  
+  
